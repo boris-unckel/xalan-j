@@ -317,8 +317,7 @@ public final class Encodings extends Object
         {
             final InputStream is; 
                 
-            SecuritySupport ss = SecuritySupport.getInstance();
-            is = ss.getResourceAsStream(Encodings.class.getClassLoader(),
+            is = SecuritySupport.getResourceAsStream(Encodings.class.getClassLoader(),
                                             ENCODINGS_FILE);
 
             Properties props = new Properties();

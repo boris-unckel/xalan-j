@@ -135,7 +135,7 @@ public final class TemplatesImpl implements Templates, Serializable {
 
 		TransletClassLoader() {
 			super(TransletClassLoader.class.getClassLoader());
-			ClassLoader loader = SecuritySupport.getInstance().getContextClassLoader();
+			ClassLoader loader = SecuritySupport.getContextClassLoader();
 			
 			// Don't bother delegating if the framework loader is the TCCL
 			ctx = frameworkLoader == loader ? null : loader;
